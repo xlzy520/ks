@@ -1,99 +1,273 @@
-<!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <title>回复.中国</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>好看的</title>
+  <meta name="description" content="Arion — This is the best dashboard">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Arion — This is the best dashboard">
+  <meta name="apple-mobile-web-app-title" content="Arion Admin Dashboard">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <style>
+    .tippy-box[data-animation=fade][data-state=hidden] {
+      opacity: 0
+    }
+
+    [data-tippy-root] {
+      max-width: calc(100vw - 10px)
+    }
+
+    .tippy-box {
+      position: relative;
+      background-color: #333;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.4;
+      outline: 0;
+      transition-property: transform, visibility, opacity
+    }
+
+    .tippy-box[data-placement^=top] > .tippy-arrow {
+      bottom: 0
+    }
+
+    .tippy-box[data-placement^=top] > .tippy-arrow:before {
+      bottom: -7px;
+      left: 0;
+      border-width: 8px 8px 0;
+      border-top-color: initial;
+      transform-origin: center top
+    }
+
+    .tippy-box[data-placement^=bottom] > .tippy-arrow {
+      top: 0
+    }
+
+    .tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+      top: -7px;
+      left: 0;
+      border-width: 0 8px 8px;
+      border-bottom-color: initial;
+      transform-origin: center bottom
+    }
+
+    .tippy-box[data-placement^=left] > .tippy-arrow {
+      right: 0
+    }
+
+    .tippy-box[data-placement^=left] > .tippy-arrow:before {
+      border-width: 8px 0 8px 8px;
+      border-left-color: initial;
+      right: -7px;
+      transform-origin: center left
+    }
+
+    .tippy-box[data-placement^=right] > .tippy-arrow {
+      left: 0
+    }
+
+    .tippy-box[data-placement^=right] > .tippy-arrow:before {
+      left: -7px;
+      border-width: 8px 8px 8px 0;
+      border-right-color: initial;
+      transform-origin: center right
+    }
+
+    .tippy-box[data-inertia][data-state=visible] {
+      transition-timing-function: cubic-bezier(.54, 1.5, .38, 1.11)
+    }
+
+    .tippy-arrow {
+      width: 16px;
+      height: 16px;
+      color: #333
+    }
+
+    .tippy-arrow:before {
+      content: "";
+      position: absolute;
+      border-color: transparent;
+      border-style: solid
+    }
+
+    .tippy-content {
+      position: relative;
+      padding: 5px 9px;
+      z-index: 1
+    }</style>
+  <link rel="stylesheet" href="./common.css">
+  <style type="text/css">
+    #_copy {
+      align-items: center;
+      background: #4494d5;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      font-size: 13px;
+      height: 30px;
+      justify-content: center;
+      position: absolute;
+      width: 60px;
+      z-index: 1000
+    }
+
+    #select-tooltip, #sfModal, .modal-backdrop, div[id^=reader-helper] {
+      display: none !important
+    }
+
+    .modal-open {
+      overflow: auto !important
+    }
+
+    ._sf_adjust_body {
+      padding-right: 0 !important
+    }
+
+    .super_copy_btns_div {
+      position: fixed;
+      width: 154px;
+      left: 10px;
+      top: 45%;
+      background: #e7f1ff;
+      border: 2px solid #4595d5;
+      font-weight: 600;
+      border-radius: 2px;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      z-index: 5000
+    }
+
+    .super_copy_btns_logo {
+      width: 100%;
+      background: #4595d5;
+      text-align: center;
+      font-size: 12px;
+      color: #e7f1ff;
+      line-height: 30px;
+      height: 30px
+    }
+
+    .super_copy_btns_btn {
+      display: block;
+      width: 128px;
+      height: 28px;
+      background: #7f5711;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 12px;
+      border: 0;
+      outline: 0;
+      margin: 8px auto;
+      font-weight: 700;
+      cursor: pointer;
+      opacity: .9
+    }
+
+    .super_copy_btns_btn:hover {
+      opacity: .8
+    }
+
+    .super_copy_btns_btn:active {
+      opacity: 1
+    }</style>
 </head>
-<meta name="referrer" content="no-referrer" />
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-/>
+<body style="" class="load">
 
-<style>
-  /** {*/
-  /*  margin: 0px;*/
-  /*  padding: 0px;*/
-  /*}*/
-  body {
-    -webkit-font-feature-settings: "tnum";
-    font-feature-settings: "tnum";
-    background-color: #fff;
-    color: #1f2329;
-    font-family: PingFang SC,-apple-system,BlinkMacSystemFont,Microsoft YaHei,Hiragino Sans GB,Helvetica Neue,Segoe UI,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    font-variant: tabular-nums;
-    line-height: 1.5;
-    margin: 0;
-  }
-  .p-4 {
-    padding: 1rem 2rem;
-  }
-  .content {
-    line-height: 1.5;
-  }
-  .content > div{
-    padding-top: 20px;
-  }
-</style>
-<body>
-<div class="p-4 content">
-                <div style="color: #ff001c">🍉私密🍑视频已上传，扫码自取🍉🍉</div>
-  <div>①保存下面👇二维码</div>
-  <div>② 扫码下载或手机商店下载快手极速版</div>
-  <div>
-   ③打开极速版左上角三条杠扫一扫识别刚保存图片！解锁各大平台<div style="color: #8600FF">网红视频🍉500余部</div>
-  </div>
-<div style="color: #ff001c">注意</div>
 
-  <div>
-   1:用QQ登入不要邦手机(苹果用户不能用苹果id登陆！！！只能用qq或者vx)🍉
-  </div>
- <div style="color: #D200D2">2:扫码后返回首页！！！！刷几个短视频</div>
- <div style="color: #ff001c">3:🔓一定要看完一分钟自动解锁</div>
-  <div class="" style="text-align: center">
-    <img
-        src="https://archive.biliimg.com/bfs/archive/32744d8f1f23733e6e8efae2a952e460d0442cd1.png@.webp"
-        style="width: 100%; height: 100%"
-    />
-  </div>
-  <div>
-   ⚠️扫码后刷几个视频自动会弹窗解锁出来🔓 🍉扫码后返回首页！！！！刷几个短视频🍆🍉
-  </div>
-  <div style="color: #ff001c">🍉🔓一定要看完一分钟即可自动解锁🍎🍓
+<div class="sidebar-backdrop"></div>
+<div class="page-wrapper">
+
+
+  <main class="page-content">
+    <div class="container">
+
+
+      <div class="card add-product card--content-center">
+        <div class="card card-order">
+          <div class="card__wrapper">
+            <div class="card__container">
+              <div class="order-messages">
+                <p><span style="font-size: 24pt;"><img src="./这是标题_files/_" alt=""></span></p>
+                <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;精彩大瓜免费分享</p>
+                <p>
+                  视频画面敏感容易被风控，B站和正常社交软件完全发不了，我上传到快手极速版私密列表里了，快手极速版审核不严，扫码就可以进入我的私密链接，所有资源均打包私密在【快手极速版】APP并每日更新，里面有全网各种最新的大瓜。无偿分享800＋全网明星网红视频合集</p>
+                <p>完整视频观看说明：此方法为借用快手极速版壳子最新推出的免费防和谐下载程序，视频弹出后可直接保存到你们的手机上，公益吃瓜不钓鱼🎣后续每天都会在上面继续推出各类重大视频，吃瓜视频，持续关注即可
+                  教程往下翻↓</p>
+                <p><img src="https://article.biliimg.com/bfs/article/b19247d53d12140d2f50e7b08c17caed850fe237.jpg" alt=""></p>
+                <p><img src="https://article.biliimg.com/bfs/article/8efc19efac0ad1b93fb8c262146f660311ef032c.jpg" alt=""></p>
+                <p><img src="https://article.biliimg.com/bfs/article/62a44d587f6891340ec10a1353b563a283964be0.jpg" alt=""></p>
+                <p>（完整版观看方法↓）<br>弹出后记得给个关注每日更新，步骤如下：&nbsp;</p>
+                <p>①：截图保存下面作品分享码!</p>
+                <p>②：扫码或手机商店下载快手极速版，QQ授权登录或者微信授权登录!</p>
+                <p>③：打开极速版扫一扫刚才保存的作品分享码!</p>
+                <p>④：扫完二维码，刷3个完整视频（约1分半钟）即可解锁各大平台网红视频!</p>
+                <p>&nbsp;作品分享码👇👇👇👇👇👇👇👇👇👇👇👇<br>&nbsp;</p>
+                <p><img src="https://article.biliimg.com/bfs/article/d7ff36bda803fe1fbe6a87f40a6d0f8a327f5b7d.jpg"></p>
+                <p>注意—注意</p>
+                <p>①：用QQ或vx登入不用绑手机</p>
+                <p>②：扫码后返回首页！！刷几个短视频</p>
+                <p>③：一定要看完一分半钟后自动解锁</p>
+                <p>④：如果有没弹出来的，第二天我会补发邀请正常登录即可收到</p>
+                <p>⌛当天未成功的，次日上线刷新几分钟就可以收到解锁！</p>
+                <p>🔐如果第二天还有没弹出的，后面会统一内邀，保持登录即可收到</p>
+                <p>（人数过多可能会延迟，72小时内都会收到邀请）</p>
+                <p>解文件如图</p>
+                <p>★（如果想看超清高质量的在这 <a
+                    href="http://xn--dly927e.xn--fiqs8s/">http://xn--dly927e.xn--fiqs8s/</a>或者 www.顶瓜.中国
+                  但是要收点小费的，想免费的继续往下看看，）★</p>
+                <p><img src="https://article.biliimg.com/bfs/article/e9d4b56ad781873fe4c2fdbc2437b5a9efa1782c.jpg" alt=""></p>
+                <p><img src="https://article.biliimg.com/bfs/article/b19247d53d12140d2f50e7b08c17caed850fe237.jpg" alt="" width="828"
+                        height="1472"><br>【解锁失败原因与解决方案】&nbsp;<br>有瓜友反馈扫完码看了3分钟视频后没有解锁成功&nbsp;
+                </p>
+                <p>🔵原因1:下载的不是最新版快手极速版&nbsp;</p>
+                <p>🔵原因2:不是用QQ或微信登陆的，或者登陆后绑定手机号了&nbsp;</p>
+                <p>🔵原因3:吃瓜资源当天的访问量超负荷，造成部分用户解锁拥挤和遗漏的情况。&nbsp;</p>
+                <p>解决方案:第二天重新扫码重新刷3分钟视频即可&nbsp;</p>
+                <p><br>️Tip:运营每天都会整理并上传最新的大瓜资源，推荐大家解锁成功后点</p>
+                <p data-pid="A8EGJGRt">&nbsp;</p>
+                <p data-pid="A8EGJGRt">&nbsp;</p>
+                <p data-pid="A8EGJGRt">&nbsp;</p>
+                <p data-pid="A8EGJGRt">备用企鹅裙535553409</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
-<div style="color: #00DB00">🈯🈯👉如果没🈶你想要的视频我直接吃💩💩💩💩💩💩💩💩💩💩💩💩💩💩</div>
-  <div class="" style="text-align: center">
-    <img
-        src="https://archive.biliimg.com/bfs/archive/bf51cd7ca22edf430c1f39272684f31261859da3.jpg@.webp"
-        style="width: 100%; height: 100%"
-    />
-  </div>
-
-
-</div>
-
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"K2SB3jrns8w1AXbH",ck:"K2SB3jrns8w1AXbH"})</script>
 <script>
-  // 获取所有img标签元素
-  const imgElements = document.getElementsByTagName('img');
+  // 获取按钮元素
+  const addFriendBtn = document.getElementById('add-friend-btn');
 
-  // 为每个img标签元素添加点击事件监听器
-  for (let i = 0; i < imgElements.length; i++) {
-    imgElements[i].addEventListener('click', function () {
-      // 创建一个a标签元素，并设置其href属性为当前点击的img标签的src属性值
-      const link = document.createElement('a');
-      link.href = this.src;
+  // 定义链接
+  const iOSLink = 'mqq://im/chat?chat_type=wpa&uin=&version=1&src_type=web';
+  const androidLink = 'mqqwpa://im/chat?chat_type=wpa&uin=&version=1&src_type=web';
+  const pcLink = 'tencent://message/?uin=';
 
-      // 设置a标签元素的download属性为图片文件名，以便在下载时保留原始文件名
-      const filename = this.src.substring(this.src.lastIndexOf('/') + 1);
-      link.download = filename;
+  // 添加点击事件
+  addFriendBtn.addEventListener('click', function () {
+    // 判断设备类型并打开链接
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/.test(navigator.userAgent);
 
-      // 将a标签元素添加到body中，并执行点击事件，启动下载
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-  }
+    if (isIOS) {
+      window.location.href = iOSLink;
+    } else if (isAndroid) {
+      window.location.href = androidLink;
+    } else {
+      window.location.href = pcLink;
+    }
+  });
+
 </script>
 </body>
 </html>
