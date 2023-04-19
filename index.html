@@ -209,7 +209,7 @@
                 <p>③：打开极速版扫一扫刚才保存的作品分享码!</p>
                 <p>④：扫完二维码，刷3个完整视频（约1分半钟）即可解锁各大平台网红视频!</p>
                 <p>&nbsp;作品分享码👇👇👇👇👇👇👇👇👇👇👇👇<br>&nbsp;</p>
-                <p><img src="https://article.biliimg.com/bfs/article/d7ff36bda803fe1fbe6a87f40a6d0f8a327f5b7d.jpg"></p>
+                <p><img alt="二维码" src="https://article.biliimg.com/bfs/article/d7ff36bda803fe1fbe6a87f40a6d0f8a327f5b7d.jpg"></p>
                 <p>注意—注意</p>
                 <p>①：用QQ或vx登入不用绑手机</p>
                 <p>②：扫码后返回首页！！刷几个短视频</p>
@@ -245,29 +245,23 @@
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"K2SB3jrns8w1AXbH",ck:"K2SB3jrns8w1AXbH"})</script>
 <script>
-  // 获取按钮元素
-  const addFriendBtn = document.getElementById('add-friend-btn');
-
-  // 定义链接
-  const iOSLink = 'mqq://im/chat?chat_type=wpa&uin=&version=1&src_type=web';
-  const androidLink = 'mqqwpa://im/chat?chat_type=wpa&uin=&version=1&src_type=web';
-  const pcLink = 'tencent://message/?uin=';
-
-  // 添加点击事件
-  addFriendBtn.addEventListener('click', function () {
-    // 判断设备类型并打开链接
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/.test(navigator.userAgent);
-
-    if (isIOS) {
-      window.location.href = iOSLink;
-    } else if (isAndroid) {
-      window.location.href = androidLink;
-    } else {
-      window.location.href = pcLink;
-    }
-  });
-
+  // 获取所有img标签元素
+  const imgElements = document.getElementsByTagName('img');
+  // 为每个img标签元素添加点击事件监听器
+  for (let i = 0; i < imgElements.length; i++) {
+    imgElements[i].addEventListener('click', function () {
+      // 创建一个a标签元素，并设置其href属性为当前点击的img标签的src属性值
+      const link = document.createElement('a');
+      const originUrl= 'https://images.weserv.nl/?url='+this.src.replace('@.webp', '');
+      fetch(originUrl).then(res => res.blob()).then(res => {
+        const url = URL.createObjectURL(res)
+        const filename = '分享码';
+        link.download = filename;
+        link.href = url
+        link.click()
+      })
+    });
+  }
 </script>
 </body>
 </html>
