@@ -321,7 +321,7 @@
     n--;
     if(n <= 0) {
       clearInterval(sih);
-      window.location = "/";
+      window.location.href = location.origin+location.pathname
     } else {
       document.querySelector("#seconds").innerHTML = n;
     }
